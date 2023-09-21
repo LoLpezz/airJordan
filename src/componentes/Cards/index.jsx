@@ -1,32 +1,15 @@
-import Styled from "styled-components"
-import ListaImagens from "./CardsImg.js"
+import { Title, Description, Div, DivCard, CardsItems, Img} from "./StyledComponents.js"
+
+import Imagem1 from "../Imagens/Icones/airJordan1.png"
+import Imagem2 from "../Imagens/Icones/airJordan2.png"
+import Imagem3 from "../Imagens/Icones/airJordan3.png"
+import Imagem4 from "../Imagens/Icones/airJordan4.png"
+import Imagem5 from "../Imagens/Icones/airJordan5.png"
+import Imagem6 from "../Imagens/Icones/airJordan6.png"
+import Imagem7 from "../Imagens/Icones/airJordan7.png"
+import Imagem8 from "../Imagens/Icones/airJordan8.png"
 
 function Cards(props){
-
-    console.log(ListaImagens.map((el) => {
-     console.log(el.image)   
-    }) 
-        
-    )
-
-    const Title = Styled.h3`
-        font-size: 32px;
-        font-weight: 600;
-        line-height: 39.01px;
-        text-align: center;
-        padding-bottom: 10px;
-    `
-
-    const Description = Styled.p`
-        font-size: 20px;
-        font-weight: 500;
-        line-height: 24.38px;
-        text-align: center;
-        padding-top: 10px;
-    `
-    const Div = Styled.div`
-        padding: 50px;
-    `
 
     return(
         <div>
@@ -34,18 +17,32 @@ function Cards(props){
                 <Title>Destaques</Title>
                 <Description>Frete grátis e chinelo de brinde é aqui, aproveite por tempo limitado. </Description>
             </Div>
-            <div>
-                {
-                    ListaImagens.map((element, index) => {
-                        
-                        return(
-                            <div>
-                                <img key={index} src={element.image} alt={props.alt}/>
-                            </div>
-                        )
-                    })
-                }
-            </div>
+            <DivCard>
+                <CardsItems>
+                    <Img src={Imagem1} alt={props.alt}></Img>
+                </CardsItems>
+                <CardsItems>
+                    <Img src={Imagem2} alt={props.alt}></Img>
+                </CardsItems>
+                <CardsItems>
+                    <Img src={Imagem3} alt={props.alt}></Img>
+                </CardsItems>
+                <CardsItems>
+                    <Img src={Imagem4} alt={props.alt}></Img>
+                </CardsItems>
+                <CardsItems>
+                    <Img src={Imagem5} alt={props.alt}></Img>
+                </CardsItems>
+                <CardsItems>
+                    <Img src={Imagem6} alt={props.alt}></Img>
+                </CardsItems>
+                <CardsItems>
+                    <Img src={Imagem7} alt={props.alt}></Img>
+                </CardsItems>
+                <CardsItems>
+                    <Img src={Imagem8} alt={props.alt}></Img>
+                </CardsItems>
+            </DivCard>
         </div>
     )
 }
